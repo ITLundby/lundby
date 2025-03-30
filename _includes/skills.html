@@ -1,0 +1,8 @@
+<section class="section skills" id="skills">
+    <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        {% for skill in site.skills %}
+          <li class="skills__list-item btn btn--plain">{{ skill }}</li>
+        {% endfor %}
+      </ul>
+  </section>

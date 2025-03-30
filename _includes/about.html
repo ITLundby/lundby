@@ -1,0 +1,19 @@
+<div class="about center">
+    <h1>
+      Hello, welcome to <span class="about__name">{{ site.about.name }}</span>
+    </h1>
+  
+    <h2 class="about__role">{{ site.about.role }}</h2>
+  
+    <p class="about__desc">{{ site.about.description }}</p>
+  
+    <div class="about__contact center">
+      {% if site.about.resume %}
+        <a href="{{ site.about.resume }}">
+          <span class="btn btn--outline">
+            Resume
+          </span>
+        </a>
+      {% endif %}
+    </div>
+  </div>

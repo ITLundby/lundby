@@ -1,0 +1,65 @@
+title: Lundby IT
+email: itlundby@gmail.com.com
+description: >- # this means to ignore newlines until "baseurl:"
+  IT Consultancy & Software Solutions.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+language: "en"
+languages:
+  en: "English"
+  da: "Danish"
+about:
+  name: Lundby IT
+  role: IT Consultancy and Solutions
+  description: Aarhus based developer.
+skills:
+  - HTML
+  - CSS
+  - JavaScript
+  - Node.js
+  - React
+  - Jekyll
+  - Git
+projects:
+  - name: "Developer in Fintech"
+    description: "Software developer in Danish Fintech for four years."
+    stack:
+      - ".NET"
+      - "SQL"
+      - "Angular"
+      - "Go"
+      - "Docker"
+  - name: "IT Consultant"
+    description: "A software developer for a Danish Consultancy for a year."
+    stack:
+      - ".NET"
+      - "Python"
+      - "MicroPython"
+      - "React"
+      - "TypeScript"
+      - "Docker"
+      - "Azure"
+  - name: "Senior Developer and Lead"
+    description: "A senior developer and team lead, in a global Danish company."
+    stack:
+      - ".NET"
+      - "SQL"
+      - "Azure"
+      - "Docker"
+  - name: "Solutions Architect"
+    description: "A solutions architect."
+    stack:
+      - ".NET"
+      - "SQL"
+      - "Google Cloud"
+      - "Azure"
+      - "Docker"
+      - "Clean Architecture"
+      - "Domain Driven Design"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed

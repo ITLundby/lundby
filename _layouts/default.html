@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <!-- You could add JS for theme switching later -->
+</head>
+<body class="{{ page.theme_name | default: 'light' }}">
+  
+  {% include header.html %} <!-- Include the header -->
+
+  <div id="top" class="app">
+    {{ content }}
+  </div>
+
+  {% include footer.html %} <!-- Include the footer -->
+
+  <script src="{{ '/assets/theme-switch.js' | relative_url }}"></script> <!-- Theme switching script -->
+</body>
+</html>

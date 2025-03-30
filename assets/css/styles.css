@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+    color: var(--clr-fg-alt);
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.3rem;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  /* Navigation Styles */
+  .nav__list {
+    display: flex;
+    margin-right: 1.5em;
+  }
+  
+  .nav__list-item {
+    margin-left: 1.5em;
+  }
+  
+  .nav__list-item a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+  }
+  
+  .nav__list-item a:hover {
+    color: #007bff;  /* Change link color on hover */
+  }
+  
+  /* Theme and Language Toggle Button Styling */
+  button {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: transparent;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+  }
+  
+  .about__name {
+    color: var(--clr-primary);
+  }
+  
+  .about__role {
+    margin-top: 1.2em;
+  }
+  
+  .about__desc {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+  
+  .about__desc,
+  .about__contact {
+    margin-top: 2.4em;
+  }
+  
+  .about .link--icon {
+    margin-right: 0.8em;
+  }
+  
+  .about .btn--outline {
+    margin-right: 1em;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    align-items: center;
+  }
+  
+  .contact .section__title {
+    font-size: 2rem;
+    color: var(--clr-primary);
+  }
+  
+  .contact .btn--outline {
+    margin-top: 1.2em;
+    text-decoration: none;
+  }
+
+  .skills__list {
+    max-width: 450px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .skills__list-item {
+    margin: 0.5em;
+  }
+
+  .projects__grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap: 2em;
+  }
+  
+  .project {
+    padding: 2em;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+  }
+  
+  .project:hover {
+    transform: translateY(-7px);
+  }
+  
+  .project__description {
+    margin-top: 1em;
+  }
+  
+  .project__stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+  }
+  
+  .project__stack-item {
+    margin: 0.5em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--clr-fg-alt);
+  }
+  
+  /* Media queries */
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 2.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact {
+      margin-top: 2em;
+    }
+    .about {
+      align-items: flex-start;
+      margin-top: 2em;
+    }
+    .nav__list {
+      display: none;  /* Hide navigation by default */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;  /* Background for mobile menu */
+      z-index: 2;
+      padding: 2em 0;  /* Add some padding to the top */
+    }
+  
+    .nav__list-item {
+      margin: 0.5em 0;
+    }
+  
+    button {
+      margin-top: 1em;
+    }
+  
+    #theme-toggle, #lang-toggle {
+      margin: 0.5em 0;
+    }
+
+    .hamburger-toggle {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+  }
+  
+  /* Light Theme Styles */
+  body.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.light h1,
+  body.light h2,
+  body.light h3,
+  body.light h4 {
+    color: #333; /* Lighter text color for light theme */
+  }
+  
+  body.light a {
+    color: #007bff;
+  }
+  
+  /* Dark Theme Styles */
+  body.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark h1,
+  body.dark h2,
+  body.dark h3,
+  body.dark h4 {
+    color: #e0e0e0; /* Lighter text color for dark theme */
+  }
+  
+  body.dark a {
+    color: #80c8ff;
+  }
+  
+  body.dark button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  /* Button styling for the theme toggle */
+  button#theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  body.dark button#theme-toggle {
+    color: #f0f0f0;
+  }
+  
+  /* Add any other global styles as necessary for light/dark themes */
