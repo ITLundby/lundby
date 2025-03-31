@@ -3,20 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <title>{{ site.about.name.en }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   <!-- You could add JS for theme switching later -->
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Import the Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="{{ page.theme_name | default: 'light' }}">
+<body class="{{ page.theme_name | default: 'light' }} app">
   
   {% include header.html %} <!-- Include the header -->
 
-  <div id="top" class="app">
+  <div id="top">
     {{ content }}
   </div>
 
   {% include footer.html %} <!-- Include the footer -->
 
-  <script src="{{ '/assets/theme-switch.js' | relative_url }}"></script> <!-- Theme switching script -->
+  <script src="{{ '/assets/js/theme-switch.js' | relative_url }}"></script> <!-- Theme switching script -->
+  <script src="{{ '/assets/js/language-switch.js' | relative_url }}"></script> <!-- Language switching script -->
 </body>
 </html>

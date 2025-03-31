@@ -1,4 +1,4 @@
-<section id="projects" class="section projects">
+<section id="experience" class="section projects">
     <h2 class="section__title">Experience</h2>
   
     <div class="projects__grid">
@@ -7,13 +7,11 @@
         <h3>{{ project.name }}</h3>
         <p class="project__description">{{ project.description }}</p>
 
-        {% if project.stack %}
-            <ul class="project__stack">
-            {% for item in project.stack %}
-                <li class="project__stack-item">{{ item }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+        <ul class="project__stack">
+        {% for item in project.stack %}
+            <li class="project__stack-item">{{ item }}</li>
+        {% endfor %}
+        </ul>
         </div>
     {% endfor %}
     </div>

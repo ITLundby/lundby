@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
   
     // Check local storage for the saved theme
     const savedTheme = localStorage.getItem('theme');
@@ -22,10 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.remove('light');
         body.classList.add('dark');
         localStorage.setItem('theme', 'dark');
+        updateIcon('dark');
       } else {
         body.classList.remove('dark');
         body.classList.add('light');
         localStorage.setItem('theme', 'light');
+        updateIcon('light');
       }
     });
   
@@ -42,4 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
+
+    // Function to update theme icon
+    // Function to update the icon based on the theme
+    function updateIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+      }
+    }
   });
