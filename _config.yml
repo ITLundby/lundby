@@ -2,8 +2,8 @@ title: LIT.
 email: itlundby@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   IT Consultancy & Software Solutions.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/lundby" # the subpath of your site, e.g. /blog
+url: "https://itlundby.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 language: "en"
 languages:
   en: "English"
